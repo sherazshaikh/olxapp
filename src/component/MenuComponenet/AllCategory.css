@@ -1,0 +1,31 @@
+.All_Category > .div{
+    font-size: 15px !important;
+    text-transform: uppercase;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+.All_Category p{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 25px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+.All_Category p:hover{
+    color: darkcyan;
+}
+
+.Ads{
+    background-image: url(https://statics.olx.com.pk/external/base/img/hero_bg_pk.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-clip: border-box;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 250px;
+
+}

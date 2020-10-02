@@ -1,0 +1,9 @@
+.category_div{
+    height: 40px;
+    width: 100vw;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    box-shadow: 0  2px 5px rgb(145, 144, 144);
+}
