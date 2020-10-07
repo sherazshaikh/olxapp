@@ -1,17 +1,56 @@
-.cities{
-    width: 300px;
-    height: 300px;
-    background-color: rgb(206, 201, 201);
-   z-index: 111;
-    position: absolute;
-    top: -5%;
-    left: 87px;
+.cities {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  z-index: 222;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+  top: 110%;
+  left: 0;
+  box-shadow: 0 5px 5px gray;
+}
+.current-location {
+  color: rgb(0, 0, 187);
+  font-weight: 900;
+  cursor: pointer;
+  padding: 5px 0;
+}
+.current-location:hover {
+  background: rgb(122, 245, 224);
+}
+.current-location i {
+  margin: 10px;
+  font-size: 25px;
+}
+.adress {
+  font-size: 12px;
+  font-weight: 300;
+  margin-left: 20px;
+}
+.hr {
+  margin: 10px 0;
+}
+.Cities-name {
+  list-style: none;
+  width: 100%;
+  margin: 0px;
 }
 
-.Cities-name li{
-    list-style: none;
-    text-decoration: none;
-    margin:10px;
-    padding: 20px;
-    background: rgb(255, 255, 255);
+.Cities-name li {
+  padding: 10px;
+  text-decoration: none;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  transition: all ease-in-out 0.1s;
+  cursor: pointer;
+}
+.Cities-name li:hover {
+  background: rgb(122, 245, 224);
+}
+.Cities-name li i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: gray;
 }

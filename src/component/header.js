@@ -4,6 +4,7 @@ import Btn from "./svg/Sell.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
+import Cities from './MenuComponenet/cities'
 import "./CSS/header.css";
 
 
@@ -18,7 +19,7 @@ const Header = () => {
     }
   };
   return (
-   
+
     <div className="header">
       <div className="logo">
         <a href="JavaScript">
@@ -43,14 +44,16 @@ const Header = () => {
               className="DropDown"
             />
           ) : (
-            <ArrowDropDownIcon
-              fontSize="large"
-              color="action"
-              onClick={MenuToggle}
-              className="DropDown"
-            />
-          )}
+              <ArrowDropDownIcon
+                fontSize="large"
+                color="action"
+                onClick={MenuToggle}
+                className="DropDown"
+              />
+
+            )}
         </span>
+        {ToggleManu ? (<Cities />) : (" ")}
       </div>
       <div className="input-search">
         <input

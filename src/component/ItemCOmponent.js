@@ -8,18 +8,20 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 300,
+    minWidth: 280,
+    maxWidth: 280,
     height: 250,
-    maxHeight: "250",
-    margin: "0 10px",
+    maxHeight: 250,
+    margin: "10px 10px",
     padding: "0",
     borderLeft: "2px solid #ffce32",
     borderLeftWidth: "5px",
     cursor: "pointer",
+    border: '0.5px solid lightgray'
   },
   img: {
     marginLeft: "70px",
-    marginTop: "5px",
+    marginTop: "10px",
   },
   icon: {
     float: "right",
@@ -32,16 +34,16 @@ export default function ImgMediaCard({ img, price, descr }) {
   const [Favorite, setFavorit] = useState(false);
   const classes = useStyles();
 
-  const Like = () => {
+  const AddFav = () => {
     Favorite ? setFavorit(false) : setFavorit(true)
   }
 
   return (
     <Card className={classes.root}>
       {Favorite ? (
-        <FavoriteIcon onClick={Like} className={classes.icon} />
+        <FavoriteIcon onClick={AddFav} className={classes.icon} />
       ) : (
-          <FavoriteBorderIcon onClick={Like} className={classes.icon} />
+          <FavoriteBorderIcon onClick={AddFav} className={classes.icon} />
         )}
 
       <img

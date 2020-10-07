@@ -1,0 +1,35 @@
+.section{
+    width: 100vw;
+    display: flex;
+   flex-direction: column;
+   height: auto;
+
+}
+.section h2{
+    margin-left: 40px;
+    font-weight: 600;
+}
+.content{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width:90% ;
+   align-items: flex-start ;
+}
+#ViewMore{
+    width: 100px;
+    padding: 10px 10px;
+    border: 1px solid black;
+    margin: 0 auto;
+    cursor: pointer;
+    background: #fff;
+    font-weight: 600;
+    box-sizing: border-box;
+
+}
+#ViewMore:hover{
+    border: 4px solid black;
+}
+.section .heading{
+    margin-left: 80px;
+}

@@ -29,3 +29,16 @@
     height: 250px;
 
 }
+
+@media screen and (max-width: 480px){
+    
+.Ads{
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-clip: content-box;
+    width: 100vw;
+    height: 120px;
+
+}
+}
