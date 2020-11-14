@@ -1,6 +1,7 @@
 import React, { createContext } from 'react'
+import Advertise from '../MenuComponenet/Banner'
 import Home from '../Home'
-import SearchRecommend from '../searcRecommended'
+import RecommendItem from '../RecommendedItem'
 import Mobile from "../images/mobile.jpg";
 import Mobile2 from "../images/mobile.jpg";
 import shoe from "../images/shoe.jpg";
@@ -13,8 +14,6 @@ import handfree from "../images/handfree.jpg";
 import handfree2 from "../images/handfree2.jpg";
 import camera from "../images/camera.jpg";
 import camera2 from "../images/camera2.jpg";
-
-
 
 
 
@@ -83,7 +82,7 @@ const Product = [
     img: watch2,
     price: "15,000",
     description: "branded watch  in best price",
-  },{
+  }, {
     img: Mobile2,
     price: "25,000",
     description: "Best Smart Phone in Budget Price ",
@@ -147,7 +146,7 @@ const Product = [
     img: watch2,
     price: "15,000",
     description: "branded watch  in best price",
-  },{
+  }, {
     img: Mobile2,
     price: "25,000",
     description: "Best Smart Phone in Budget Price ",
@@ -216,15 +215,19 @@ const Product = [
 
 export const Context = createContext();
 
-const Data = () => {
+const DataStore = () => {
 
   return (
-    <Context.Provider value={Product} >
-      <SearchRecommend />
-      <Home />
-    </Context.Provider>
+    <>
+      <Context.Provider value={Product} >
+        <Advertise />
+        <RecommendItem />
+        <Home />
+      </Context.Provider>
+
+    </>
   )
 }
 
 
-export default Data;
+export default DataStore;

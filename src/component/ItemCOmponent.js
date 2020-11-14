@@ -10,24 +10,32 @@ const useStyles = makeStyles({
   root: {
     minWidth: 280,
     maxWidth: 280,
+
     height: 250,
     maxHeight: 250,
     margin: "10px 10px",
     padding: "0",
-    borderLeft: "2px solid #ffce32",
+    
     borderLeftWidth: "5px",
     cursor: "pointer",
-    border: '0.5px solid lightgray'
+    border: '1px solid #dddddd',
+    borderLeft:'none'
   },
   img: {
     marginLeft: "70px",
     marginTop: "10px",
+   
+    objectFit:'contain'
   },
   icon: {
     float: "right",
     margin: "10px",
     color: '#ff6ec7'
   },
+  descrition:{
+    borderLeft: "5px solid #ffce32",
+    height:'100%'
+  }
 });
 
 export default function ImgMediaCard({ img, price, descr }) {
@@ -55,7 +63,7 @@ export default function ImgMediaCard({ img, price, descr }) {
         src={img}
         title="Contemplative Reptile"
       />
-      <CardContent>
+      <CardContent className={classes.descrition}>
         <h2>{price}</h2>
         <p>{descr}</p>
       </CardContent>

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ImgMediaCard from './ItemCOmponent'
-import { Context } from './Data/Data.js'
+import { Context } from './Store/StoreData.js'
 import './CSS/Home.css'
 
 
@@ -13,9 +13,6 @@ const Home = () => {
     function UpdateData() {
         setLoadMore(() => LoadMore + 5)
     }
-  
-
-
     return (
 
         <div className="section">

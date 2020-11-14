@@ -1,5 +1,5 @@
-import React, {useContext, useState} from "react";
-import { Context } from './Data/Data'
+import React, { useContext, useState } from "react";
+import { Context } from './Store/StoreData'
 import ImgMediaCard from "./ItemCOmponent";
 import "./CSS/SearchRecommend.css";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
@@ -10,8 +10,8 @@ function scroll(onScroll) {
   slider.scrollLeft += onScroll;
 }
 
-const SearchRecommend = () => {
-const data = useContext(Context)
+const RecommendItem = () => {
+  const data = useContext(Context)
 
   return (
     <div className="MainSectionStyle">
@@ -24,7 +24,7 @@ const data = useContext(Context)
           <ArrowBackIosIcon />
         </button>
         <div className="ContentSlider" id="ContenSlider">
-        {data.map((product, index) => (
+          {data.slice(0, 10).map((product, index) => (
             <ImgMediaCard
               key={index}
               img={product.img}
@@ -41,4 +41,4 @@ const data = useContext(Context)
   );
 };
 
-export default SearchRecommend;
+export default RecommendItem;

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import { ReactComponent as Logo } from "./svg/logo.svg";
 import Btn from "./svg/Sell.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
-import Cities from './MenuComponenet/cities'
+import Cities from './Cities/Cities';
 import "./CSS/header.css";
 
 
@@ -22,9 +23,9 @@ const Header = () => {
 
     <div className="header">
       <div className="logo">
-        <a href="JavaScript">
+        <Link to={'/'}>
           <Logo />
-        </a>
+        </Link>
       </div>
       <div className="input-city">
         <span className="search-icon">
@@ -63,7 +64,7 @@ const Header = () => {
         />
       </div>
       <button id="searchButton">
-        <SearchIcon fontSize="large" color="primary" />
+        <SearchIcon className="Search" fontSize="large" />
       </button>
       <div className="login">
         <a href="JavaScript;">login</a>

@@ -1,88 +1,134 @@
-.header{
-    height: 80px;
-    width: 100vw;
-    background: #f7f7f7;
-    display: flex;
-    align-items: center;
-    padding-left:30px ;
-    position: fixed;
-    z-index: 4444;
-    box-shadow: 0 0px 1px rgb(161, 160, 160) ;
+.header {
+  height: auto;
+  width: 100vw;
+  background: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 30px;
+  position: fixed;
+  z-index: 4444;
+  box-shadow: 0 0px 1px rgb(161, 160, 160);
+}
+.logo {
+  margin-right: 10px;
+}
+.input-city {
+  height: 50px;
+  width: 300px;
+  background: #fff;
+  border: 2px solid rgb(85, 207, 255);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.search-icon {
+  margin-left: 0px;
+}
+#citySearch {
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+.input-search {
+  width: 50vw;
+  border: 2px solid black;
+  margin-left: 10px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 0 20px;
+}
+#search {
+  width: 100%;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+#searchButton {
+  height: 50px;
+  padding: 0 5px;
+  border: none;
+  background: #002f34;
+  border-radius: 5px;
 
 }
-.logo{
-    margin-right: 10px;
+.login {
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 15px;
+  padding: 5px;
+  border-bottom: 2px solid black;
 }
-.input-city{
-    height: 50px;
+.login a {
+  text-decoration: none;
+  color: black;
+}
+.login :hover {
+  border-bottom: none;
+}
+.sell {
+  margin-left: 20px;
+}
+.DropDown {
+  transition: 0.8s;
+}
+.Search{
+  color: #fff;
+}
+
+@media screen and (max-width: 1275px) {
+  .input-search {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 1059px) {
+  .input-city {
     width: 300px;
-    background: #fff;
-    border: 2px solid rgb(85, 207, 255);
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
+  }
+  .sell{
+    width: 40px;
+    margin-left: 0;
+    margin-right: 50px;
+}
+.input-search {
+  width: 30vw;
+}
+.sell a img{
+  width: 80px;
+}
+}
 
-
-  
-}
-.search-icon{
-    margin-left: 0px;
-}
-#citySearch{
-    font-size: 15px;
-    border: none;
-    outline: none;
-
-}
-.input-search{
-    width: 50vw;
-    border: 2px solid black;
-    margin-left: 10px;
-    height: 50px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    background: #fff;
-    padding: 0 20px;
-}
-#search{
-    width: 100%;
-    font-size: 15px;
-    border: none;
-    outline: none;
-}
-#searchButton{
-    height: 50px;
-    padding: 0 5px;
-    border: none;
-    background: rgb(235, 235, 235);
-    border-radius: 5px;
-    border: 1px solid black;
-
-}
-.login{
-    margin-left: 10px;
-    
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: capitalize;
-    font-size: 20px;
-    padding: 5px;
-    border-bottom: 2px solid black ;
-}
-.login a{
-    text-decoration: none;
-    color: black;
-}
-.login :hover{
-   border-bottom: none;
-}
-.sell{
-    margin-left: 10px;
-
-}
-.DropDown{
-    transition:0.8s;
-}
+@media screen and (max-width: 768px) {
+    .input-city {
+      display: none;
+    }
+    .header{
+        justify-content: space-between;
+    }
+    .input-search{
+        display: none;
+    }
+    #searchButton{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+    .sell{
+        width: 40px;
+        margin-left: 0;
+        margin-right: 50px;
+    }
+    .sell a img{
+        width: 80px;
+    }
+  }
+ 

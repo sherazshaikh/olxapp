@@ -1,0 +1,118 @@
+.car-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 10px;
+}
+.ppl-srch {
+  margin-left: 30px;
+}
+.ppl-srch ul {
+  display: flex;
+  list-style: none;
+  padding-bottom: 20px;
+  padding-top: 10px;
+
+  font-size: 15px;
+}
+.ppl-srch ul li {
+  margin-left: 20px;
+  color: grey;
+  font-size: 12px;
+  cursor: pointer;
+}
+.filter-sec {
+  flex: 1;
+  padding-left: 30px;
+}
+.filter {
+  margin-left: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.drop-down-content {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid gray;
+  transition: ease-in-out 0.6s;
+  cursor: pointer;
+}
+.drop-down {
+  padding: 10px 0;
+  margin-left: 30px;
+  text-transform: capitalize;
+}
+
+.toggle-icon {
+  margin-top: 10px;
+}
+.up-icon {
+  animation: animUp 0.6s;
+  transform: rotate(180deg);
+}
+@keyframes animUp {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.down-icon {
+  animation: animDown 0.6s;
+}
+@keyframes animDown {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.toggle-list {
+  list-style: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  transition: all 0.6s;
+  animation: listAnim 0.6s;
+  opacity: 1;
+}
+@keyframes listAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.toggle-list > li {
+  margin: 30px 0;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.car-component {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}

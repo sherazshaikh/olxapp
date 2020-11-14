@@ -1,29 +1,25 @@
 import React from 'react'
 import './CSS/category.css'
-import AllCategory from'./MenuComponenet/allCategory'
-import MobilePhone from'./MenuComponenet/mobile'
-import Cars from'./MenuComponenet/cars'
-import MotorCycle from'./MenuComponenet/motorcycle';
-import Houses from'./MenuComponenet/houses';
-import TvAudioVideos from'./MenuComponenet/audioVideo';
-import Tablets from'./MenuComponenet/tablets';
-import LandPlot from'./MenuComponenet/landplot';
+import { Link } from 'react-router-dom'
 
 
-const Category = ()=>{
+const Category = () => {
 
-return(
-    <div className="category_div">
-        <AllCategory />
-        <MobilePhone />
-        <Cars/>
-        <MotorCycle/>
-        <Houses/>
-        <TvAudioVideos/>
-        <Tablets/>
-        <LandPlot/>
-    </div>
-)
+    return (
+        <>
+        <div className="category_div d-none d-md-flex">
+
+            <Link className="Link" exact to="">AllCategory</Link>
+            <Link className="Link" to="/mobile">Mobile Phones</Link>
+            <Link className="Link" to="/cars">Cars</Link>
+            <Link className="Link" to="/motorcycle">MotorCycles</Link>
+            <Link className="Link" to="/houses">Houses</Link>
+            <Link className="Link" to="/tv-audio-video">Tv-Audio-Video</Link>
+            <Link className="Link" to="tablets">Tablets</Link>
+            <Link className="Link" to="land-plot">Land Plot</Link>
+        </div>
+        </>
+    )
 
 
 }

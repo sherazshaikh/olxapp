@@ -1,0 +1,21 @@
+import React from 'react';
+import './DropDownComp.css'
+import { CheckComp, InputComponent, DropDownList } from './CheckComp.txt'
+
+
+
+
+export default function ControlledAccordions() {
+
+    const Fuel = [{ item: 'petrol' }, { item: 'diesel' }, { item: 'cng' }, { item: 'lpg' }]
+    const Heading = ["CATEGORIES",'LOCATION','MAKE AND MODEL']
+
+    return (
+        <div className="Filter-Option">
+            {Heading.map(item=>(<DropDownList item={item}/>))}
+            <InputComponent item="PRICE" />
+            <CheckComp item='REGISTOR IN' />
+            <CheckComp item='FUEL' feul={Fuel} />
+        </div>
+    );
+}
